@@ -15,7 +15,6 @@ Ce projet est une calculatrice web simple et élégante, construite avec HTML, C
 - **HTML** : Structure de la page web.
 - **Tailwind CSS** : Framework CSS pour le style et le design responsive.
 - **JavaScript** : Logique de la calculatrice et gestion des interactions utilisateur.
-- **Font Awesome** : Icônes pour une meilleure expérience utilisateur (non utilisé dans cette version, mais prêt à l'emploi).
 
 ## Comment utiliser
 
