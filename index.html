@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="mx-auto overflow-hidden mt-10 shadow-lg mb-2 bg-purple-900 border rounded-lg lg:w-2/6 md:w-3/6 sm:w-4/6">
+        <div class="">
+            <div class="p-5 text-white text-center text-3xl bg-purple-900"><span class="text-orange-500">Calcu</span>lator</div>
+            
+            <!-- Zone d'affichage avec hauteur fixe -->
+            <div class="p-5 text-white text-right text-3xl bg-purple-800 h-24 overflow-y-auto" id="displayTop">0</div>
+            <div class="p-5 text-white text-right text-3xl bg-purple-800 h-24 overflow-y-auto" id="displayBottom">0</div>
+
+            <!-- Boutons de la calculatrice -->
+            <div class="flex items-stretch bg-purple-900 h-24">
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">%</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">(</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">)</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">÷</div>
+                </button>
+            </div>
+
+            <!-- Répétez la même structure pour les autres lignes de boutons -->
+            <div class="flex items-stretch bg-purple-900 h-24">
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">7</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">8</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">9</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">×</div>
+                </button>
+            </div>
+
+            <div class="flex items-stretch bg-purple-900 h-24">
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">4</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">5</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">6</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">-</div>
+                </button>
+            </div>
+
+            <div class="flex items-stretch bg-purple-900 h-24">
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">1</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">2</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">3</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">+</div>
+                </button>
+            </div>
+
+            <div class="flex items-stretch bg-purple-900 h-24 mb-4">
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">C</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">0</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">.</div>
+                </button>
+                <button class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+                    <div class="rounded-full h-20 w-20 flex items-center bg-orange-500 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none">=</div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
